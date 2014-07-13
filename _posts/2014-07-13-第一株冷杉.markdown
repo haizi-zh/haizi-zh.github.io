@@ -9,15 +9,13 @@ categories: jekyll update
 
 {% highlight python %}
 def show_welcome(name, msg):
-	print '%s\n\n--%s' % (msg, name)
+    print '%s\n\n--%s' % (msg, name)
 
 # 向大家问好
 if __name__ == '__main__':
-	show_welcome('Zephyre', '你好，森林。')
-#=> prints 'Hi, Tom' to STDOUT.
+    show_welcome('Zephyre', '你好，森林。')
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+记住，绵延万里的森林，就从[这里][taiga-home]开始。
 
-[jekyll-gh]: https://github.com/jekyll/jekyll
-[jekyll]:    http://jekyllrb.com
+[taiga-home]: http://blog.zephyre.me
