@@ -1,17 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Zephyre的泰加林地</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 13 Jul 2014 11:11:53 +0800</pubDate>
-    <lastBuildDate>Sun, 13 Jul 2014 11:11:53 +0800</lastBuildDate>
-    <generator>Jekyll v2.1.1</generator>
-    
-      <item>
-        <title>第一株冷杉</title>
-        <description>&lt;p&gt;&lt;img class=&quot;myimg&quot; src=&quot;http://zephyre.qiniudn.com/blog/Taiga-01.jpg?imageView/1/w/800/h/360/q/85&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Zephyre的泰加林地</title>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://localhost:4000" />
+<updated>2014-07-13T12:32:08+08:00</updated>
+<id>http://localhost:4000/</id>
+<author>
+  <name>Zephyre</name>
+  <uri>http://localhost:4000/</uri>
+  <email>haizi.zh@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[第一株冷杉]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/%E6%BC%AB%E6%B8%B8/%E7%AC%AC%E4%B8%80%E6%A0%AA%E5%86%B7%E6%9D%89/" />
+  <id>http://localhost:4000/%E6%BC%AB%E6%B8%B8/第一株冷杉</id>
+  <published>2014-07-13T16:07:03+08:00</published>
+  <updated>2014-07-13T16:07:03+08:00</updated>
+  <author>
+    <name>Zephyre</name>
+    <uri>http://localhost:4000</uri>
+    <email>haizi.zh@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;&lt;img class=&quot;myimg&quot; src=&quot;http://zephyre.qiniudn.com/blog/Taiga-01.jpg?imageView/1/w/800/h/360/q/85&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;这是我那无边无际的泰加森林中，第一株冷杉。此时，此地，生根发芽。&lt;/p&gt;
 
@@ -23,21 +36,23 @@
 
 
 &lt;p&gt;绵延万里的森林，就从&lt;a href=&quot;http://blog.zephyre.me&quot;&gt;这里&lt;/a&gt;开始。&lt;/p&gt;
-</description>
-        <pubDate>Sun, 13 Jul 2014 16:07:03 +0800</pubDate>
-        <link>http://yourdomain.com/%E6%BC%AB%E6%B8%B8/2014/07/13/%E7%AC%AC%E4%B8%80%E6%A0%AA%E5%86%B7%E6%9D%89/</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E6%BC%AB%E6%B8%B8/2014/07/13/%E7%AC%AC%E4%B8%80%E6%A0%AA%E5%86%B7%E6%9D%89/</guid>
-        
-        <category>心思</category>
-        
-        
-        <category>漫游</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You&#39;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/%E6%BC%AB%E6%B8%B8/%E7%AC%AC%E4%B8%80%E6%A0%AA%E5%86%B7%E6%9D%89/&quot;&gt;第一株冷杉&lt;/a&gt; was originally published by Zephyre at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zephyre的泰加林地&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Welcome to Jekyll!]]></title>
+ <link rel="alternate" type="text/html" href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" />
+  <id>http://localhost:4000/jekyll/update/welcome-to-jekyll</id>
+  <published>2014-07-13T16:07:03+08:00</published>
+  <updated>2014-07-13T16:07:03+08:00</updated>
+  <author>
+    <name>Zephyre</name>
+    <uri>http://localhost:4000</uri>
+    <email>haizi.zh@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;You&#39;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
 To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
@@ -50,17 +65,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 
 
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&#39;s GitHub repo&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 13 Jul 2014 16:07:03 +0800</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2014/07/13/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/07/13/welcome-to-jekyll/</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-  </channel>
-</rss>
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/jekyll/update/welcome-to-jekyll/&quot;&gt;Welcome to Jekyll!&lt;/a&gt; was originally published by Zephyre at &lt;a href=&quot;http://localhost:4000&quot;&gt;Zephyre的泰加林地&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
+</entry>
+
+</feed>
