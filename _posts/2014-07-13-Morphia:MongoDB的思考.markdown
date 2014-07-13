@@ -3,7 +3,7 @@ layout: post
 title:  "Morphia/MongoDB的思考"
 date:   2014-07-13 23:53:03
 categories: 数据库
-tags: [数据库 Java MongoDB Morphia]
+tags: [数据库, Java, MongoDB, Morphia]
 ---
 
 <img class="myimg" src="http://zephyre.qiniudn.com/blog/MongoDB.png?imageView/0/w/320/q/85" style="max-width:100%;text-align:center;"/>
