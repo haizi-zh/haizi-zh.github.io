@@ -2,7 +2,7 @@
 layout: post
 title:  "第一株冷杉"
 date:   2014-07-13 08:07:03
-categories: jekyll update
+categories: 漫游
 ---
 
 这是我那无边无际的泰加森林中，第一株冷杉。此时，此地，生根发芽。

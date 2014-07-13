@@ -5,8 +5,8 @@
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 13 Jul 2014 08:26:52 +0800</pubDate>
-    <lastBuildDate>Sun, 13 Jul 2014 08:26:52 +0800</lastBuildDate>
+    <pubDate>Sun, 13 Jul 2014 08:30:28 +0800</pubDate>
+    <lastBuildDate>Sun, 13 Jul 2014 08:30:28 +0800</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
     
       <item>
@@ -24,13 +24,11 @@
 
 </description>
         <pubDate>Sun, 13 Jul 2014 16:07:03 +0800</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2014/07/13/%E7%AC%AC%E4%B8%80%E6%A0%AA%E5%86%B7%E6%9D%89/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2014/07/13/%E7%AC%AC%E4%B8%80%E6%A0%AA%E5%86%B7%E6%9D%89/</guid>
+        <link>http://yourdomain.com/%E6%BC%AB%E6%B8%B8/2014/07/13/%E7%AC%AC%E4%B8%80%E6%A0%AA%E5%86%B7%E6%9D%89/</link>
+        <guid isPermaLink="true">http://yourdomain.com/%E6%BC%AB%E6%B8%B8/2014/07/13/%E7%AC%AC%E4%B8%80%E6%A0%AA%E5%86%B7%E6%9D%89/</guid>
         
         
-        <category>jekyll</category>
-        
-        <category>update</category>
+        <category>漫游</category>
         
       </item>
     
