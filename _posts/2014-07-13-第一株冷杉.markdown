@@ -3,7 +3,10 @@ layout: post
 title:  "第一株冷杉"
 date:   2014-07-13 08:07:03
 categories: 漫游
+tags: [心思]
 ---
+
+![泰加林带](http://zephyre.qiniudn.com/blog/Taiga-01.jpg?imageView/1/w/800/h/360/q/85)
 
 这是我那无边无际的泰加森林中，第一株冷杉。此时，此地，生根发芽。
 
@@ -11,11 +14,10 @@ categories: 漫游
 def show_welcome(name, msg):
     print '%s\n\n--%s' % (msg, name)
 
-# 向大家问好
 if __name__ == '__main__':
     show_welcome('Zephyre', '你好，森林。')
 {% endhighlight %}
 
-记住，绵延万里的森林，就从[这里][taiga-home]开始。
+绵延万里的森林，就从[这里][taiga-home]开始。
 
 [taiga-home]: http://blog.zephyre.me

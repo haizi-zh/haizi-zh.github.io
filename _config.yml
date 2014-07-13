@@ -8,5 +8,7 @@ url: "http://yourdomain.com"
 github_username:  haizi-zh
 
 # Build settings
-markdown: kramdown
+# markdown: kramdown
+markdown: rdiscount
 permalink: pretty
+highlighter: pygments

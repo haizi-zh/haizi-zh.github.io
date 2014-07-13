@@ -5,27 +5,30 @@
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 13 Jul 2014 08:30:28 +0800</pubDate>
-    <lastBuildDate>Sun, 13 Jul 2014 08:30:28 +0800</lastBuildDate>
+    <pubDate>Sun, 13 Jul 2014 10:50:10 +0800</pubDate>
+    <lastBuildDate>Sun, 13 Jul 2014 10:50:10 +0800</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
     
       <item>
         <title>第一株冷杉</title>
-        <description>&lt;p&gt;这是我那无边无际的泰加森林中，第一株冷杉。此时，此地，生根发芽。&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;http://zephyre.qiniudn.com/blog/Taiga-01.jpg?imageView/1/w/800/h/360/q/85&quot; alt=&quot;泰加林带&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这是我那无边无际的泰加森林中，第一株冷杉。此时，此地，生根发芽。&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show_welcome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;c&quot;&gt;# 向大家问好&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;show_welcome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Zephyre&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;你好，森林。&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;记住，绵延万里的森林，就从&lt;a href=&quot;http://blog.zephyre.me&quot;&gt;这里&lt;/a&gt;开始。&lt;/p&gt;
 
+&lt;p&gt;绵延万里的森林，就从&lt;a href=&quot;http://blog.zephyre.me&quot;&gt;这里&lt;/a&gt;开始。&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Jul 2014 16:07:03 +0800</pubDate>
         <link>http://yourdomain.com/%E6%BC%AB%E6%B8%B8/2014/07/13/%E7%AC%AC%E4%B8%80%E6%A0%AA%E5%86%B7%E6%9D%89/</link>
         <guid isPermaLink="true">http://yourdomain.com/%E6%BC%AB%E6%B8%B8/2014/07/13/%E7%AC%AC%E4%B8%80%E6%A0%AA%E5%86%B7%E6%9D%89/</guid>
+        
+        <category>心思</category>
         
         
         <category>漫游</category>
@@ -34,7 +37,7 @@
     
       <item>
         <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+        <description>&lt;p&gt;You&#39;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
 To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
@@ -45,8 +48,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
 
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&#39;s GitHub repo&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Jul 2014 16:07:03 +0800</pubDate>
         <link>http://yourdomain.com/jekyll/update/2014/07/13/welcome-to-jekyll/</link>
