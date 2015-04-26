@@ -11,10 +11,10 @@ url:              http://blog.zephyretech.com
 owner:
   name:           Zephyre
   avatar:         howl-cover.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  bio:            "我们拥抱优雅。我们从代码中发现美好之物。关注函数式编程，关注NoSQL，在coding的缤纷世界中弄潮。"
   email:          haizi.zh@gmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:
+  # twitter:
   facebook:       haizi.zh@gmail.com
   github:         haizi-zh
   stackexchange:
@@ -37,11 +37,11 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Theme Setup
-    url: /theme-setup
-  - title: External Link
-    url: http://mademistakes.com
-    external: true
+  # - title: Theme Setup
+    # url: /theme-setup
+  # - title: External Link
+    # url: http://mademistakes.com
+    # external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Shanghai
