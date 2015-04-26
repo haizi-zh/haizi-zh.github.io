@@ -9,6 +9,15 @@
 
 <body id="post-index" {% if page.image.feature %}class="feature"{% endif %}>
 
+<div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
+  <div class="qr_code_pc_inner">
+    <div class="qr_code_pc">
+      <img src="http://7xieh0.com1.z0.glb.clouddn.com/qrcode.jpg" class="qr_code_pc_img">
+      <p>请关注我的公众号</p>
+    </div>
+  </div>
+</div>
+
 {% include browser-upgrade.html %}
 {% include navigation.html %}
 
@@ -37,7 +46,7 @@
   </footer>
 </div><!-- /.footer-wrapper -->
 
-{% include scripts.html %}          
+{% include scripts.html %}
 
 </body>
 </html>

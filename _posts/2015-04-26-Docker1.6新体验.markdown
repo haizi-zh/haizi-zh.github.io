@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Docker 1.6新体验"
+date:   2015-04-26 11:07:03
+categories: Tech
+tags: [Docker]
+---
+
 近日，Docker发布了最新版本Docker 1.6。和前一版本相比，新版本的Docker有了一系列振奋人心的重大更新，体验有了极大的提升。下面我们就来看看这些新特性。
 
 ## 对Windows的支持
