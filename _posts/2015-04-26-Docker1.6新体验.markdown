@@ -1,0 +1,159 @@
+近日，Docker发布了最新版本Docker 1.6。和前一版本相比，新版本的Docker有了一系列振奋人心的重大更新，体验有了极大的提升。下面我们就来看看这些新特性。
+
+## 对Windows的支持
+
+在之前的版本中，Docker的运行依赖于一些Linux特有的内核特性，所以，它不能直接运行在非Linux的操作系统之上。以Mac OSX为例，为了解决这一问题，有以下两种方案：
+
+* 在宿主操作系统中安装Linux虚拟机，在其中运行Docker引擎。
+* 使用Boot2Docker
+
+事实上，上述两种方案本质上是一致的。在第一种方式里，用户需要处理好宿主机、虚拟机以及容器的网络拓扑结构，还需要不时地使用SSH登录到虚拟机中，对Docker容器进行管理。而在第二种方式里，Boot2Docker并非真正的Docker引擎，而是一个轻量级的VirtualBox虚拟机（其中已包含Docker）和一个管理工具。和第一种方式相比，Boot2Docker的最大作用，是大大简化了Docker容器的部署和管理。
+
+回到Windows的情况。这次发布的新版本，对Windows的支持，其实只不过是提供了Windows下的Boot2Docker而已。
+
+### 如何使用
+
+首先，需要设置相应的环境变量：
+
+{% highlight bash %}
+set DOCKER_HOST=tcp://<IP_ADDRESS>:2376
+set DOCKER_CERT_PATH='C:\Users\%USERPROFILE%\.boot2docker\certs\boot2docker-vm'
+set DOCKER_TLS_VERIFY=1
+{% endhighlight %}
+
+然后，在`cmd.exe`中运行以下命令：
+
+![Docker on Windows](https://mmbiz.qlogo.cn/mmbiz/CI1icWSMxPAQ2gMHkwUicZVCuZLdibYQSmic64ia8p876XF5gyaBE0WGLWny2x9m5BTsLdze3HEribFc823RBCgnzxTw/0?wx_fmt=png)
+
+### 备注
+
+* 如前所述，由于Docker Engine本质上还是基于Linux内核的，所以，除非真正的Windows版Docker Engine被开发出来，用户依然只能在Docker中运行基于Linux的容器。
+* 由于Docker容器是在VirtualBox虚拟机下运行的，所以会有一定的性能损失。
+
+## 镜像和容器的标签
+
+和Git类似，在Docker里面，镜像和容器使用一个64字节的hash id作为唯一标识。使用下面这两个命令可以体会这一点：
+
+{% highlight bash %}
+docker ps --no-trunc
+docker images --no-trunc
+{% endhighlight %}
+
+在Docker 1.6中，用户可以为容器或镜像添加`LABEL`，大大提升Docker的管理便捷程度。
+
+为了给镜像添加标签，可以在Dockerfile中使用`LABEL`命令：
+
+{% highlight bash %}
+FROM ubuntu
+LABEL name=zephyre
+{% endhighlight %}
+
+Build之后，就可以用过下面这个命令，根据标签查找镜像了：
+
+{% highlight bash %}
+docker images -f label=name=zephyre
+{% endhighlight %}
+
+如果从上述镜像启动容器，则该标签会应用在容器之上，并且可以用和上面类似的语法进行搜索：
+
+{% highlight bash %}
+docker run --name test test echo "I am bar"
+docker inspect -f '{{.Config.Labels}}' test
+docker ps -a -f label=name=zephyre
+{% endhighlight %}
+
+我们甚至还可以在启动容器的时候，添加多个标签：
+
+{% highlight bash %}
+docker run --name test2 -l name=foobar test echo "I am foo"
+{% endhighlight %}
+
+## Logging Driver
+
+Docker容器的日志处理，一向是个令人头疼的问题。
+
+我们先回顾一下在之前的版本中，Docker是如何保存日志的。众所周知，`docker logs $CID`可以用来查看容器`CID`产生的日志。这条命令的背后，是Docker引擎将容器的标准输出重定向到一个json格式的文件中。
+
+{% highlight bash %}
+$ CID=$(docker run -d ubuntu echo "Hello")
+$ echo $CID
+5594248e11b7d4d40cfec4737c7e4b7577fe1e665cf033439522fbf4f9c4e2d5
+$ sudo cat /var/lib/docker/containers/$CID/$CID-json.log
+{"log":"Hello\n","stream":"stdout","time":"2015-03-30T00:34:58.782658342Z"}
+{% endhighlight %}
+
+而对于容器自身写入的日志文件，一般来说，有下面几种方式来处理：
+
+* 在容器内部，开启一个搜集容器的进程。缺点：繁琐，不利于管理，同时也违背了one-container-one-process的原则。
+* 在启动容器的时候，将host上的某个路径mount上去。容器生成的日志放在该路径里面，然后在host，启用一个日志搜集程序。
+* 和上面一条类似，只不过不是将host上的某个路径进行挂载，而是建立一个数据卷容器，然后使用`--volumes-from`选项，将其映射到任务容器中。
+
+Docker 1.6开始支持log driver，支持下面几种类型：
+
+* json-file：该类型就是上面提到的，将标准输出重定向到`/var/lib/docker/containers/$CID/$CID-json.log`的方式。
+* syslog：将日志输出到syslog
+* none：禁用日志搜集功能。注意：此时，`docker logs`命令也被禁用了。
+
+在启动容器的时候，可以通过`--log-driver`选项来指定：
+
+{% highlight bash %}
+docker run -d --log-driver=syslog ubuntu echo "Hello"
+{% endhighlight %}
+
+## 使用digest来标识镜像
+
+Docker的镜像是建立在Aufs基础上的。通过Aufs，可以将不同的目录mount在一个虚拟文件系统中，形成一种分层的模型。在建立镜像时，每个写操作，都被视为一种增量操作，即在原有的数据层上，添加一个新的层次，如下图所示。
+
+![Docker Aufs Layers](https://mmbiz.qlogo.cn/mmbiz/CI1icWSMxPAQ2gMHkwUicZVCuZLdibYQSmicDR91DoBLQIDaibQHFus5aWK6z7p2gm6MHKuWg4y7vC4Eugg6SvE9THw/0?wx_fmt=png)
+
+在以前的版本中，如果要pull一个镜像，需要指定它的name和tag，比如：`docker pull ubuntu:latest`
+
+考虑这样一个镜像：
+
+{% highlight bash %}
+$ docker history ubuntu:latest
+IMAGE               CREATED             CREATED BY                                      SIZE
+d0955f21bf24        5 weeks ago         /bin/sh -c #(nop) CMD [/bin/bash]               0 B
+9fec74352904        5 weeks ago         /bin/sh -c sed -i 's/^#\s*\(deb.*universe\)$/   1.895 kB
+a1a958a24818        5 weeks ago         /bin/sh -c echo '#!/bin/sh' > /usr/sbin/polic   194.5 kB
+f3c84ac3a053        5 weeks ago         /bin/sh -c #(nop) ADD file:777fad733fc954c0c1   192.5 MB
+511136ea3c5a        22 months ago                                                       0 B
+{% endhighlight %}
+
+可以看见，上述镜像的历史，是由若干layer组成的（如`d0955f21bf24`, `9fec74352904`, `a1a958a24818`等）。然而，在1.6版本之前，只能对`ubuntu:latest`进行pull操作，而无法实现pull任意一个layer。这一限制，在Docker 1.6里被打破了。我们现在可以在pull时，使用相应的digest：
+
+{% highlight bash %}
+docker pull ubuntu@sha256:9fec74352904baf5ab5237caa39a84b0af5c593dc7cc08839e2ba65193024507
+{% endhighlight %}
+
+## Ulimits
+
+在1.6之前，Docker容器的ulimit设置，继承自docker daemon。在很多时候，对于单个容器来说，这样的ulimit实在是太高了。在Docker 1.6里，可以设置全局默认的ulimit：
+
+{% highlight bash %}
+docker -d --default-ulimit nproc=1024:2048
+{% endhighlight %}
+
+或者在启动容器时，单独对其ulimit进行设置：
+
+{% highlight bash %}
+docker run -d --ulimit nproc=2048:4096 httpd
+{% endhighlight %}
+
+## Dockerfile指令
+
+最后，让我们再来看一个望眼欲穿的功能：在commit和import的时候，使用Dockerfile指令。假设现在我们有一个容器`c3f279d17e0a`。在将其commit成新的镜像时，可以执行一段Dockerfile指令：
+
+{% highlight bash %}
+docker commit --change "ENV DEBUG true" c3f279d17e0a  foo/bar:v2
+{% endhighlight %}
+
+在以前，为了做到这一点，我们需要先commit成镜像ImageA，然后写一个Dockerfile：`FROM ImageA`，再build成镜像ImageB，很繁琐。
+
+Cool~
+
+## 参考
+
+* [Boot2Docker for Windows](http://docs.docker.com/v1.6/installation/windows/)
+* Docker Windows Client是在微软的帮助下开发的。Ahmet Alp Balkan ([@ahmetalpbalkan](https://twitter.com/ahmetalpbalkan))是主要贡献者。
+* 参考了[Markus Eisele](https://plus.google.com/100362024804331957185)的[blog](http://blog.eisele.net/2015/04/how-to-use-docker-16-windows-client.html)（可能需要翻墙）
