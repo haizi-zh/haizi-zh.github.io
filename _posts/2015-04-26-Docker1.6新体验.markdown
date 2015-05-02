@@ -6,6 +6,8 @@ categories: Tech
 tags: [Docker]
 ---
 
+<img src="http://mmbiz.qlogo.cn/mmbiz/CI1icWSMxPAQ2gMHkwUicZVCuZLdibYQSmicFStySO9uXwej0wfYhQL6tCK4ib6ohVtpXbGfaARS2sic39OzfUibolkNQ/0?wx_fmt=png" width="320px" align="left" />
+
 近日，Docker发布了最新版本Docker 1.6。和前一版本相比，新版本的Docker有了一系列振奋人心的重大更新，体验有了极大的提升。下面我们就来看看这些新特性。
 
 ## 对Windows的支持

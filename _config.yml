@@ -1,5 +1,6 @@
 title:            第零程序空间
-description:      Zephyre's taiga
+name:             第零程序空间
+description:      我们拥抱优雅。我们从代码中发现美好之物。关注函数式编程，关注NoSQL，在coding的缤纷世界中弄潮。
 disqus_shortname:
 reading_time:     true
 words_per_minute: 200
