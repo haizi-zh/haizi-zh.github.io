@@ -5,7 +5,7 @@ disqus_shortname:
 reading_time:     true
 words_per_minute: 200
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://blog.zephyretech.com
+url:              http://voice.zephyretech.com
 #url:              http://localhost:4000
 
 # Owner/author information
@@ -74,3 +74,4 @@ kramdown:
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+

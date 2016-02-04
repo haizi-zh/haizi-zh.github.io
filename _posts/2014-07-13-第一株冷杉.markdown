@@ -20,4 +20,4 @@ if __name__ == '__main__':
 
 绵延万里的森林，就从[这里][taiga-home]开始。
 
-[taiga-home]: http://blog.zephyretech.com
+[taiga-home]: http://voice.zephyretech.com
